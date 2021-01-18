@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"  href="bootstrap/css/estilo.css">
+    <script type="text/javascript" src="bootstrap/js/Jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+    <title>Curriculo</title>
+</head>
+<body>
+        
+    <div id="folha">
+        <h1 id="Titulo">CURRICULO</h1>
+       <section id="corpoP">
+            <div id="cabelo">
+                <h1 class="texto">OBJETIVO:</h1>
+                <div class="bloco">
+                    <p class="texto">Por em uso minhas especialidades, além de contribuir para o desenvolvimento da empresa e aprender o quanto mais com essa experiência.</p>
+                </div>
+            </div>
+            <div id="cabelo2">
+                <h1 class="texto">Competências Técnicas:</h1>
+                <div class="bloco">
+                    <p class="texto">Conhecimento em linguagens de programação C, Python, WEB, conhecimento básico em mysql, Lógica de Programação, além de Pacote Office e certa experiência com Linux.</p>
+                </div>
+            </div>
+            <div id="cabelo3">
+                <h1 class="texto">Escolaridade:</h1>
+                <div class="bloco">
+                    <ul>
+                        <li class="texto">
+                            Ciência da Computação - Faculdade Anhanguera (01/2017-12/2020)
+                            Cursando 8° semestre.
+                        </li>
+                        <li class="texto">
+                            Ensino Médio - Escola Monsenhor Ignacio Gioia.                                 Concluído - Dezembro de 2016.
+                        </li class="texto">
+                    </ul>
+                </div>
+            </div>
+            <div id="cabelo4">
+                <h1 class="texto">Formação Profissional:</h1>
+                <div class="bloco">
+                    <ul>
+                        <li class="texto">
+                            Informática - Microcamp (03/2017 á 07/2018).
+                                Pacote office com ênfase em técnicas administrativas e táticas financeiras/contábeis.
+                        </li>
+                        <li class="texto">
+                            4449 Linux BEGINNERS IN CLOUD- 4Linux (08/2018 á 08/2018)
+                        </li>
+                        <li class="texto">
+                            Com experiência em área de Tecnologia da Informação na empresa "Automação do Vale".
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="cabelo5">
+                <h1 class="texto">EXPERIÊNCIAS ADICIONAIS:</h1>
+                <div class="bloco">
+                    <ul>
+                        <li class="texto">
+                            Experiência como garçom por 3 anos (não registrado).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div id="cabelo6">
+                <h1 class="texto">IDIOMA:</h1>
+                <div class="bloco">
+                    <ul>
+                        <li class="texto">
+                            Inglês Avançado - CCBEU (01/2011 á 12/2016).
+                        </li>
+                        <li class="texto">
+                            Espanhol Básico - Microcamp (05/2018 á 07/1018).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <aside id="esquerda">
+            <h1 class="texto">Status:</h1>
+            <div class="bloco">
+                <p>Nome: Kaique Menezes da Silva Oliveira</p>
+                <p>Status: anos, solteiro, brasileiro</p>
+                <p>Rua Benedito Leite Guimarães, 491  Jardim América, Taubaté - SP</p>
+                <p>Telefone: (12)99619-4430</p>  
+                <p>Email: kaique_prog@hotmail.com</p>
+                    
+            </div>
+            <h1 class="texto">Certificados:</h1>
+            <div class="bloco">
+                <ul>
+                    <li class="texto">
+                        html e css Avançado, site Curso em Video()
+                    </li>
+                    <li class="texto">
+                            
+                    </li>
+                    <li class="texto">
+                            
+                    </li>
+                </ul>
+            </div>
+        </aside>
+        <footer>
+            FOOTER
+        </footer>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script>
+      var _AlturaDocumento = $(window).height(); //pega altura da janela
+
+    function AlturaSecao() {
+      $('.secao').height(_AlturaDocumento); //atribui o valor da variável a todas as divs com a classe secao
+    }
+
+    function ScrollSecao() {
+      console.log('entrou');
+      var body = $('html, body');
+      if($(this).parent('.secao').is('#secao-01')) {
+        //verifica se está na primeira seção e rola para a segunda
+        body.animate({scrollTop: _AlturaDocumento}, '500');
+      } else if ($(this).parent('.secao').is('#secao-02')) {
+        //verifica se está na segunda seção e rola para a terceira
+        body.animate({scrollTop: _AlturaDocumento*2}, '500');
+      } else if ($(this).parent('.secao').is('#secao-03')) {
+        //verifica se está na terceira seção e rola para a quarta
+        body.animate({scrollTop: _AlturaDocumento*3}, '500');
+      } else {
+        //rola para o início da página
+        body.animate({scrollTop: 0}, '800');
+      }
+    }
+
+    $('.icone-scroll').click(ScrollSecao); //chama a função na ação de click no ícone
+
+    $(AlturaSecao); //chama a nossa função só depois que o documento estiver completamente carregado
+  </script>
+</body>
+</html>
